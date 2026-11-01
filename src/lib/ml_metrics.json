@@ -1,0 +1,205 @@
+{
+  "horizon": 5,
+  "threshold": 0.0,
+  "feature_cols": [
+    "ret_1",
+    "ret_5",
+    "ret_10",
+    "ret_20",
+    "vol_10",
+    "vol_20",
+    "vol_ratio",
+    "rsi_14",
+    "rsi_7",
+    "ema_ratio",
+    "price_sma20",
+    "price_sma50",
+    "macd",
+    "macd_hist",
+    "macd_signal_cross",
+    "bb_width",
+    "bb_pos",
+    "momentum_10",
+    "momentum_20",
+    "high_low_range",
+    "close_location"
+  ],
+  "n_train": 14013,
+  "n_val": 4607,
+  "n_test": 4715,
+  "symbols": [
+    "AXISBANK.NS",
+    "BAJFINANCE.NS",
+    "BHARTIARTL.NS",
+    "HDFCBANK.NS",
+    "HINDUNILVR.NS",
+    "ICICIBANK.NS",
+    "INFY.NS",
+    "ITC.NS",
+    "KOTAKBANK.NS",
+    "LT.NS",
+    "MARUTI.NS",
+    "NTPC.NS",
+    "POWERGRID.NS",
+    "RELIANCE.NS",
+    "SBIN.NS",
+    "SUNPHARMA.NS",
+    "TCS.NS",
+    "TITAN.NS",
+    "ULTRACEMCO.NS",
+    "WIPRO.NS"
+  ],
+  "target_def": "1 if close[t+5]/close[t]-1 > 0.0",
+  "embargo": 5,
+  "logistic": {
+    "auc": 0.4705848283187621,
+    "log_loss": 0.7071467184103141,
+    "brier": 0.25686560825177496,
+    "acc": 0.46808059384941675,
+    "pos_rate": 0.4449628844114528,
+    "acc_confident_0.55": 0.42789223454833597,
+    "coverage_0.55": 0.26765641569459175,
+    "acc_confident_0.6": 0.37748344370860926,
+    "coverage_0.6": 0.06405090137857901,
+    "acc_confident_0.65": 0.4,
+    "coverage_0.65": 0.013785790031813362
+  },
+  "random_forest": {
+    "auc": 0.4928898567079735,
+    "log_loss": 0.6984210633999943,
+    "brier": 0.25260791825478013,
+    "acc": 0.4858960763520679,
+    "pos_rate": 0.4449628844114528,
+    "acc_confident_0.55": 0.46502835538752363,
+    "coverage_0.55": 0.11219512195121951,
+    "acc_confident_0.6": 0.47572815533980584,
+    "coverage_0.6": 0.021845174973488864,
+    "acc_confident_0.65": 0.5238095238095238,
+    "coverage_0.65": 0.004453870625662778
+  },
+  "gradient_boosting": {
+    "auc": 0.49248306063638314,
+    "log_loss": 0.7279838323522079,
+    "brier": 0.2665976058549303,
+    "acc": 0.4608695652173913,
+    "pos_rate": 0.4449628844114528,
+    "acc_confident_0.55": 0.44525547445255476,
+    "coverage_0.55": 0.639236479321315,
+    "acc_confident_0.6": 0.4416403785488959,
+    "coverage_0.6": 0.2689289501590668,
+    "acc_confident_0.65": 0.4452380952380952,
+    "coverage_0.65": 0.08907741251325557
+  },
+  "logistic_calibrated": {
+    "auc": 0.4654403651711895,
+    "log_loss": 0.7200950794661533,
+    "brier": 0.2628938962879253,
+    "acc": 0.44538706256627786,
+    "pos_rate": 0.4449628844114528,
+    "acc_confident_0.55": 0.42598870056497173,
+    "coverage_0.55": 0.5630965005302226,
+    "acc_confident_0.6": 0.4,
+    "coverage_0.6": 0.0784729586426299,
+    "acc_confident_0.65": 0.3150684931506849,
+    "coverage_0.65": 0.015482502651113467
+  },
+  "ensemble": {
+    "auc": 0.482517148817605,
+    "log_loss": 0.7079125227637887,
+    "brier": 0.25725375929555916,
+    "acc": 0.46956521739130436,
+    "pos_rate": 0.4449628844114528,
+    "acc_confident_0.55": 0.42557803468208094,
+    "coverage_0.55": 0.29353128313891835,
+    "acc_confident_0.6": 0.4444444444444444,
+    "coverage_0.6": 0.0591728525980912,
+    "acc_confident_0.65": 0.3870967741935484,
+    "coverage_0.65": 0.013149522799575823
+  },
+  "gb_feature_importance": [
+    {
+      "feature": "vol_20",
+      "importance": 0.10167901170891913
+    },
+    {
+      "feature": "bb_width",
+      "importance": 0.09994892001209356
+    },
+    {
+      "feature": "macd_hist",
+      "importance": 0.0852171995810167
+    },
+    {
+      "feature": "price_sma50",
+      "importance": 0.08382837573053188
+    },
+    {
+      "feature": "vol_10",
+      "importance": 0.07577842090376455
+    },
+    {
+      "feature": "macd",
+      "importance": 0.07177594477105378
+    },
+    {
+      "feature": "ema_ratio",
+      "importance": 0.06043716550291969
+    },
+    {
+      "feature": "vol_ratio",
+      "importance": 0.05914076508498824
+    },
+    {
+      "feature": "rsi_7",
+      "importance": 0.05307241788792982
+    },
+    {
+      "feature": "high_low_range",
+      "importance": 0.041026556223187946
+    },
+    {
+      "feature": "rsi_14",
+      "importance": 0.037426053580918286
+    },
+    {
+      "feature": "momentum_20",
+      "importance": 0.03460327710930999
+    },
+    {
+      "feature": "bb_pos",
+      "importance": 0.03290292234570329
+    },
+    {
+      "feature": "price_sma20",
+      "importance": 0.029827702725089656
+    },
+    {
+      "feature": "ret_5",
+      "importance": 0.02733562065162552
+    },
+    {
+      "feature": "ret_20",
+      "importance": 0.02593708590473129
+    },
+    {
+      "feature": "ret_1",
+      "importance": 0.025087083945207585
+    },
+    {
+      "feature": "momentum_10",
+      "importance": 0.02104745603752147
+    },
+    {
+      "feature": "close_location",
+      "importance": 0.017908477630747384
+    },
+    {
+      "feature": "ret_10",
+      "importance": 0.011116537445190205
+    },
+    {
+      "feature": "macd_signal_cross",
+      "importance": 0.004903005217549985
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+1) Open PowerShell
+
+2) Go into the INNER folder that contains package.json:
+   cd C:\Users\HP\Downloads\AIVOLT-v6\Aivolt-main
+
+   If that fails, find package.json:
+   dir /s package.json
+
+3) Create env file:
+   copy .env.local.example .env.local
+
+4) Edit .env.local in Notepad and set at least:
+   NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+
+   Get these from: supabase.com -> your project -> Settings -> API
+
+5) Install and run:
+   npm install
+   npm run dev
+
+6) Open browser:
+   http://localhost:3000
+
+Do NOT run npm from C:\Users\HP\Downloads\AIVOLT-v6
+Run it from the folder that has package.json (usually Aivolt-main).
