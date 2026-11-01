@@ -32,7 +32,7 @@ AIVOLT is a full-stack quantitative trading platform engineered with a "safety-f
 
 ##  The ML Model Card (Honest & Rigorous)
 
-We don't claim to predict the future. We build a rigorous ML pipeline.
+It doesn't claim to predict the future. It's a rigorous ML pipeline.
 
 | Metric | Value |
 |--------|-------|
@@ -44,7 +44,7 @@ We don't claim to predict the future. We build a rigorous ML pipeline.
 | **Inference Latency** | ~1.2 ms |
 
 **Why include a 0.55 AUC model?**
-Because building a safe, honest ML pipeline is more valuable than faking a 99% accuracy. The value is in the **architecture**: robust data ingestion, reproducible walk-forward validation, and a risk engine that prevents the model from blowing up your account when it's wrong.
+Because building a safe, honest ML pipeline is more valuable than faking a 99% accuracy. The value is in the **architecture**: robust data ingestion, reproducible walk-forward validation, and a risk engine that prevents the model from blowing up account when it's wrong.
 
 ---
 
